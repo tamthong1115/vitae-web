@@ -1,0 +1,42 @@
+{
+  "header": {
+    "slogan": "Vitae, mạng xã hội phong cách yêu Tổ quốc, yêu Đồng bào!",
+    "language": "Ngôn ngữ",
+    "label": "Tiếng Việt",
+    "icon": "https://img.icons8.com/color/48/vietnam.png"
+  },
+  "login": {
+    "welcome": "Chào mừng bạn đến với Vitae!",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "register": "Đăng kí",
+    "login": "Đăng nhập",
+    "login_google": "Đăng nhập với Google",
+    "login_apple": "Đăng nhập với Apple",
+    "email_invalid": "Sai định dạng email",
+    "email_required": "Email không được bỏ trống",
+    "password_min": "Tối thiểu 6 kí tự",
+    "password_required": "Mật khẩu không được bỏ trống"
+  },
+  "register": {
+    "welcome": "Chào mừng bạn đến với Vitae!",
+    "account_name": "Tên tài khoản",
+    "account_name_min": "Tối thiểu 6 kí tự",
+    "account_name_required": "Tên tài khoản không bỏ trống",
+    "email": "Email",
+    "email_invalid": "Sai định dạng email",
+    "email_required": "Email không được bỏ trống",
+    "password": "Mật khẩu",
+    "password_min": "Tối thiểu 6 kí tự",
+    "password_required": "Mật khẩu không được bỏ trống",
+    "confirm_password": "Xác nhận lại mật khẩu",
+    "password_not_match": "Mật khẩu không khớp",
+    "confirm_password_required": "Mật khẩu không để trống",
+    "number_phone": "Số điện thoại",
+    "number_phone_invalid": "Sai định dạng số điện thoại",
+    "number_phone_required": "Yêu cầu số điện thoại",
+    "register": "Đăng kí",
+    "login": "Đăng nhập"
+  }
+}
+
