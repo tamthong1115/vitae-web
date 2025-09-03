@@ -9,6 +9,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Link from "next/link";
+import {useTheme} from "next-themes"
 
 export default function UserLayoutClient({children}: { children: React.ReactNode }) {
     const [isDark, setIsDark] = useState(false);
@@ -16,6 +17,8 @@ export default function UserLayoutClient({children}: { children: React.ReactNode
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
+    const {setTheme} = useTheme()
+
 
     // Setup theme từ localStorage
     useEffect(() => {
@@ -27,12 +30,10 @@ export default function UserLayoutClient({children}: { children: React.ReactNode
 
     const toggleTheme = () => {
         if (isDark) {
-            document.documentElement.classList.remove("dark");
-            localStorage.theme = "light";
+            setTheme("light");
             setIsDark(false);
         } else {
-            document.documentElement.classList.add("dark");
-            localStorage.theme = "dark";
+            setTheme("dark");
             setIsDark(true);
         }
     };
@@ -101,7 +102,8 @@ export default function UserLayoutClient({children}: { children: React.ReactNode
                 </div>
             </div>
             <div className="w-full h-full mb-5">{children}</div>
-            <div className={'w-full h-fit border-t-2 border-[var(--primary)] py-2 px-4 grid grid-cols-4 grid-rows-1 items-start gap-2'}>
+            <div
+                className={'w-full h-fit border-t-2 border-[var(--primary)] py-2 px-4 grid grid-cols-4 grid-rows-1 items-start gap-2'}>
                 <div className={'flex flex-col justify-center items-center gap-2'}>
                     <p className={'font-bold text-[var(--primary)] text-lg'}>Chính sách</p>
                     <Link href={'/'}>Quyền riêng tư</Link>

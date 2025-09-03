@@ -1,5 +1,5 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
+import {NextIntlClientProvider} from 'next-intl';
+import {notFound} from 'next/navigation';
 import React from 'react';
 import {Geist, Geist_Mono} from "next/font/google";
 import type {Metadata} from "next";
@@ -26,7 +26,7 @@ export default async function LocaleLayout({
     children: React.ReactNode;
     params: { locale: string };
 }) {
-    const { locale } = await params; // "vi" hoặc "en"
+    const {locale} = await params; // "vi" hoặc "en"
 
     let messagesAll;
     try {
@@ -42,9 +42,9 @@ export default async function LocaleLayout({
     return (
         <html lang={locale}>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-        </NextIntlClientProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+                {children}
+            </NextIntlClientProvider>
         </body>
         </html>
     );

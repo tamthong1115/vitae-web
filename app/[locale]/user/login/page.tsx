@@ -38,17 +38,14 @@ export default function UserLoginPage() {
                     }}
                 >
                     {({
-                          values,
                           handleChange,
                           handleBlur,
                           handleSubmit,
-                          setFieldValue,
                           errors,
-                          touched,
-                          resetForm,
                       }) => {
                         return (
-                            <form className="w-[70%] h-fit m-2 p-2 shadow-lg rounded-xl flex flex-col justify-center items-center gap-3">
+                            <form className="w-[70%] h-fit m-2 p-2 shadow-lg rounded-xl flex flex-col justify-center items-center gap-3"
+                            onSubmit={handleSubmit}>
                                     <TextField
                                         variant={'outlined'}
                                         name={'email'}
@@ -110,7 +107,8 @@ export default function UserLoginPage() {
                     }}
                 </Formik>
 
-                <div className="w-full h-fit m-2 p-2 shadow-lg rounded-lg grid grid-cols-1 grid-rows-2 gap-2">
+                <p className={'text-[var(--primary)]'}>Hoặc đăng nhập bằng</p>
+                <div className="w-[70%] h-fit m-2 p-2 shadow-lg rounded-lg grid grid-cols-2 grid-rows-1 gap-2">
                     <button
                         className="w-full h-fit p-2 my-2 border-2 border-[var(--primary)] rounded-lg flex flex-row justify-between items-center gap-2">
                         <div className="w-[20%]">
