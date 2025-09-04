@@ -1,0 +1,41 @@
+{
+  "header": {
+    "slogan": "Vitae, a social network with the style of loving the Fatherland and loving the People!",
+    "language": "Language",
+    "label": "Vietnamese",
+    "icon": "https://img.icons8.com/color/48/vietnam.png"
+  },
+  "login": {
+    "welcome": "Welcome to Vitae!",
+    "email": "Email",
+    "password": "Password",
+    "register": "Register",
+    "login": "Login",
+    "login_google": "Login with Google",
+    "login_apple": "Login with Apple",
+    "email_invalid": "Invalid email format",
+    "email_required": "Email cannot be left blank",
+    "password_min": "Minimum 6 characters",
+    "password_required": "Password cannot be empty"
+  },
+  "register": {
+    "welcome": "Welcome to Vitae!",
+    "account_name": "Account name",
+    "account_name_min": "Minimum 6 characters",
+    "account_name_required": "Account name cannot be empty",
+    "email": "Email",
+    "email_invalid": "Invalid email format",
+    "email_required": "Email cannot be empty",
+    "password": "Password",
+    "password_min": "Minimum 6 characters",
+    "password_required": "Password cannot be empty",
+    "confirm_password": "Confirm password",
+    "password_not_match": "Password does not match",
+    "confirm_password_required": "Password cannot be empty",
+    "number_phone": "Phone number",
+    "number_phone_invalid": "Invalid phone number format",
+    "number_phone_required": "Phone number required",
+    "register": "Register",
+    "login": "Login"
+  }
+}
