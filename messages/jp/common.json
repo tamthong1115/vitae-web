@@ -1,0 +1,59 @@
+{
+  "layout": {
+    "slogan": "Vitae、祖国と同胞を愛するスタイルのソーシャルネットワーク！",
+    "language": "言語",
+    "label": "日本語",
+    "icon": "https://img.icons8.com/color/48/japan.png",
+
+    "policy_title": "ポリシー",
+    "policy_privacy": "プライバシー",
+    "policy_legal": "法的事項",
+    "postings": "投稿内容",
+    "community": "コミュニティ",
+
+    "products_support": "製品とサポート",
+    "product_questions": "製品に関する質問",
+    "account_support": "アカウントサポート",
+    "complaints": "苦情",
+
+    "general_guidelines": "一般的なガイドライン",
+    "parties_responsibilities": "当事者の責任",
+
+    "about_us": "私たちについて",
+    "copyright": "著作権"
+  },
+  "login": {
+    "welcome": "Vitaeへようこそ！",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "register": "登録",
+    "login": "ログイン",
+    "login_google": "Googleでログイン",
+    "login_apple": "Appleでログイン",
+    "email_invalid": "メールアドレスの形式が正しくありません",
+    "email_required": "メールアドレスは必須です",
+    "password_min": "6文字以上で入力してください",
+    "password_required": "パスワードは必須です",
+    "others_way": "または"
+  },
+  "register": {
+    "welcome": "Vitaeへようこそ！",
+    "account_name": "アカウント名",
+    "account_name_min": "6文字以上で入力してください",
+    "account_name_required": "アカウント名は必須です",
+    "email": "メールアドレス",
+    "email_invalid": "メールアドレスの形式が正しくありません",
+    "email_required": "メールアドレスは必須です",
+    "password": "パスワード",
+    "password_min": "6文字以上で入力してください",
+    "password_required": "パスワードは必須です",
+    "confirm_password": "パスワードの確認",
+    "password_not_match": "パスワードが一致しません",
+    "confirm_password_required": "確認用パスワードは必須です",
+    "number_phone": "電話番号",
+    "number_phone_invalid": "電話番号の形式が正しくありません",
+    "number_phone_required": "電話番号は必須です",
+    "register": "登録",
+    "login": "ログイン"
+  }
+}
