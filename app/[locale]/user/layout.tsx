@@ -1,14 +1,18 @@
-"use client";
+'use client';
 
-import React, {useEffect, useState} from "react";
-import {useTranslations, useLocale} from "next-intl";
-import Link from "next/link";
-import {useTheme} from "next-themes"
-import {ModeToogle} from "@/components/custom-ui/mode-toogle";
-import {SelectLanguage} from "@/components/custom-ui/select-language";
+import React, { useEffect, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
+import { useTheme } from 'next-themes';
+import { ModeToogle } from '@/components/custom-ui/mode-toogle';
+import { SelectLanguage } from '@/components/custom-ui/select-language';
 
-export default function UserLayoutClient({children}: { children: React.ReactNode }) {
-    const t = useTranslations("layout");
+export default function UserLayoutClient({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const t = useTranslations('layout');
 
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center">
@@ -41,33 +45,51 @@ export default function UserLayoutClient({children}: { children: React.ReactNode
                     <Link href={"/"}>{t("postings")}</Link>
                     <Link href={"/"}>{t("community")}</Link>
                 </div>
-
-                <div className={"flex flex-col justify-center items-center gap-2"}>
-                    <p className={"font-bold text-[var(--primary)] text-lg"}>
-                        {t("products_support")}
-                    </p>
-                    <Link href={"/"}>{t("product_questions")}</Link>
-                    <Link href={"/"}>{t("account_support")}</Link>
-                    <Link href={"/"}>{t("complaints")}</Link>
-                </div>
-
-                <div className={"flex flex-col justify-center items-center gap-2"}>
-                    <p className={"font-bold text-[var(--primary)] text-lg"}>
-                        {t("general_guidelines")}
-                    </p>
-                    <Link href={"/"}>{t("community")}</Link>
-                    <Link href={"/"}>{t("parties_responsibilities")}</Link>
-                </div>
-
-                <div className={"flex flex-col justify-center items-center gap-2"}>
-                    <p className={"font-bold text-[var(--primary)] text-lg"}>
-                        {t("about_us")}
-                    </p>
-                    <Link href={"/"}>{t("about_us")}</Link>
-                    <Link href={"/"}>{t("copyright")}</Link>
-                </div>
-            </div>
-
+          {/* Select đổi ngôn ngữ */}
+          <SelectLanguage t={t} />
         </div>
-    )
+      </div>
+      <div className="w-full h-full mb-5">{children}</div>
+      <div
+        className={
+          'w-full h-fit border-t-2 border-[var(--primary)] py-2 px-4 grid grid-cols-4 grid-rows-1 items-start gap-2'
+        }
+      >
+        <div className={'flex flex-col justify-center items-center gap-2'}>
+          <p className={'font-bold text-[var(--primary)] text-lg'}>
+            {t('policy_title')}
+          </p>
+          <Link href={'/'}>{t('policy_privacy')}</Link>
+          <Link href={'/'}>{t('policy_legal')}</Link>
+          <Link href={'/'}>{t('postings')}</Link>
+          <Link href={'/'}>{t('community')}</Link>
+        </div>
+
+        <div className={'flex flex-col justify-center items-center gap-2'}>
+          <p className={'font-bold text-[var(--primary)] text-lg'}>
+            {t('products_support')}
+          </p>
+          <Link href={'/'}>{t('product_questions')}</Link>
+          <Link href={'/'}>{t('account_support')}</Link>
+          <Link href={'/'}>{t('complaints')}</Link>
+        </div>
+
+        <div className={'flex flex-col justify-center items-center gap-2'}>
+          <p className={'font-bold text-[var(--primary)] text-lg'}>
+            {t('general_guidelines')}
+          </p>
+          <Link href={'/'}>{t('community')}</Link>
+          <Link href={'/'}>{t('parties_responsibilities')}</Link>
+        </div>
+
+        <div className={'flex flex-col justify-center items-center gap-2'}>
+          <p className={'font-bold text-[var(--primary)] text-lg'}>
+            {t('about_us')}
+          </p>
+          <Link href={'/'}>{t('about_us')}</Link>
+          <Link href={'/'}>{t('copyright')}</Link>
+        </div>
+      </div>
+    </div>
+  );
 }
