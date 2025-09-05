@@ -1,9 +1,26 @@
 {
-  "header": {
+  "layout": {
     "slogan": "Vitae, mạng xã hội phong cách yêu Tổ quốc, yêu Đồng bào!",
     "language": "Ngôn ngữ",
     "label": "Tiếng Việt",
-    "icon": "https://img.icons8.com/color/48/vietnam.png"
+    "icon": "https://img.icons8.com/color/48/vietnam.png",
+
+    "policy_title": "Chính sách",
+    "policy_privacy": "Quyền riêng tư",
+    "policy_legal": "Pháp lý",
+    "postings": "Nội dung đăng tải",
+    "community": "Cộng đồng",
+
+    "products_support": "Sản phẩm & Hỗ trợ",
+    "product_questions": "Thắc mắc sản phẩm",
+    "account_support": "Hỗ trợ tài khoản",
+    "complaints": "Khiếu nại",
+
+    "general_guidelines": "Nguyên tắc chung",
+    "parties_responsibilities": "Trách nhiệm các bên",
+
+    "about_us": "Về chúng tôi",
+    "copyright": "Bản quyền"
   },
   "login": {
     "welcome": "Chào mừng bạn đến với Vitae!",
@@ -16,7 +33,8 @@
     "email_invalid": "Sai định dạng email",
     "email_required": "Email không được bỏ trống",
     "password_min": "Tối thiểu 6 kí tự",
-    "password_required": "Mật khẩu không được bỏ trống"
+    "password_required": "Mật khẩu không được bỏ trống",
+    "others_way": "Hoặc"
   },
   "register": {
     "welcome": "Chào mừng bạn đến với Vitae!",

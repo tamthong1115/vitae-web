@@ -27,6 +27,7 @@ export default async function LocaleLayout({
     params: { locale: string };
 }) {
     const {locale} = await params; // "vi" hoặc "en"
+    console.log(locale);
 
     let messagesAll;
     try {
@@ -40,12 +41,10 @@ export default async function LocaleLayout({
     if (!messages) notFound();
 
     return (
-        <html lang={locale}>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className={'w-full h-full'}>
             <NextIntlClientProvider locale={locale} messages={messages}>
                 {children}
             </NextIntlClientProvider>
-        </body>
-        </html>
+        </div>
     );
 }
