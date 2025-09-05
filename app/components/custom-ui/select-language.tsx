@@ -26,7 +26,7 @@ export const SelectLanguage = ({t}: { t: (key: string) => string }) => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline">{t("language")}</Button>
+                <Button variant="outline" className={'text-[var(--primary)]'}>{t("language")}</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuSeparator/>

@@ -11,12 +11,12 @@ export default function UserLayoutClient({children}: { children: React.ReactNode
     const t = useTranslations("layout");
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center">
+        <div className="w-full h-screen flex flex-col items-center justify-center">
             <div
                 className="flex flex-row items-center justify-between gap-2 w-full h-fit py-2 px-4 border-b-2 border-b-[var(--primary)] mb-5">
                 <div className="flex-1 flex flex-row justify-start items-center gap-2">
                     <img src="/p_logo.png" alt="logo" className="w-20 h-20 shadow-lg rounded-lg"/>
-                    <p className="font-bold text-[var(--primary]">{t("slogan")}</p>
+                    <p className="font-bold text-[var(--primary)]">{t("slogan")}</p>
                 </div>
                 <div className="w-fit flex-1 flex flex-row justify-end items-center gap-2">
                     {/* Nút đổi theme */}
