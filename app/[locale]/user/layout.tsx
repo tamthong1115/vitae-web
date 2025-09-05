@@ -1,52 +1,18 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa6';
 import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import { ModeToogle } from '@/components/custom-ui/mode-toogle';
+import { SelectLanguage } from '@/components/custom-ui/select-language';
 
 export default function UserLayoutClient({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [isDark, setIsDark] = useState(false);
-  const t = useTranslations('header');
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const { setTheme } = useTheme();
-
-  // Setup theme từ localStorage
-  useEffect(() => {
-    if (localStorage.theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (isDark) {
-      setTheme('light');
-      setIsDark(false);
-    } else {
-      setTheme('dark');
-      setIsDark(true);
-    }
-  };
-
-  // Đổi ngôn ngữ
-  const changeLang = (event: SelectChangeEvent) => {
-    const lang = event.target.value;
-    const withoutLocale = pathname.replace(/^\/(vi|en)(\/|$)/, '/');
-    router.push(`/${lang}${withoutLocale}`);
-  };
+  const t = useTranslations('layout');
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
@@ -57,74 +23,14 @@ export default function UserLayoutClient({
             alt="logo"
             className="w-20 h-20 shadow-lg rounded-lg"
           />
-          <p className="font-bold text-emerald-600">{t('slogan')}</p>
+          <p className="font-bold text-[var(--primary]">{t('slogan')}</p>
         </div>
         <div className="w-fit flex-1 flex flex-row justify-end items-center gap-2">
           {/* Nút đổi theme */}
-          <button
-            onClick={toggleTheme}
-            className={`relative inline-flex h-6 w-12 items-center rounded-full transition-colors ${
-              isDark ? 'bg-green-600' : 'bg-gray-400'
-            }`}
-          >
-            <span
-              className={`h-5 w-5 flex justify-center items-center transform rounded-full bg-white transition-transform ${
-                isDark ? 'translate-x-6' : 'translate-x-1'
-              }`}
-            >
-              {isDark ? (
-                <FaMoon color={'var(--primary)'} />
-              ) : (
-                <FaSun color={'var(--primary)'} />
-              )}
-            </span>
-          </button>
+          <ModeToogle />
 
           {/* Select đổi ngôn ngữ */}
-          <FormControl size={'medium'} variant={'standard'}>
-            <InputLabel id="demo-simple-select-label">
-              {t('language')}
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              onChange={changeLang}
-              value={locale}
-              label={t('language')}
-              className="rounded h-fit"
-              autoWidth
-              renderValue={(selected) => (
-                <div className="flex flex-row justify-center items-center gap-2">
-                  <img width="48" height="48" src={t('icon')} alt={selected} />
-                  <p>{t('label')}</p>
-                </div>
-              )}
-            >
-              <MenuItem
-                value="vi"
-                className="flex flex-row justify-center items-center gap-2"
-              >
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/vietnam.png"
-                  alt="vietnam"
-                />
-                <p>Tiếng Việt</p>
-              </MenuItem>
-              <MenuItem
-                value="en"
-                className="flex flex-row justify-center items-center gap-2"
-              >
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/great-britain.png"
-                  alt="great-britain"
-                />
-                <p>English</p>
-              </MenuItem>
-            </Select>
-          </FormControl>
+          <SelectLanguage t={t} />
         </div>
       </div>
       <div className="w-full h-full mb-5">{children}</div>
@@ -135,34 +41,37 @@ export default function UserLayoutClient({
       >
         <div className={'flex flex-col justify-center items-center gap-2'}>
           <p className={'font-bold text-[var(--primary)] text-lg'}>
-            Chính sách
+            {t('policy_title')}
           </p>
-          <Link href={'/'}>Quyền riêng tư</Link>
-          <Link href={'/'}>Pháp lý</Link>
-          <Link href={'/'}>Nội dung đăng tải</Link>
-          <Link href={'/'}>Cộng đồng</Link>
+          <Link href={'/'}>{t('policy_privacy')}</Link>
+          <Link href={'/'}>{t('policy_legal')}</Link>
+          <Link href={'/'}>{t('postings')}</Link>
+          <Link href={'/'}>{t('community')}</Link>
         </div>
+
         <div className={'flex flex-col justify-center items-center gap-2'}>
           <p className={'font-bold text-[var(--primary)] text-lg'}>
-            Sản phẩm và hỗ trợ
+            {t('products_support')}
           </p>
-          <Link href={'/'}>Thắc mắc sản phẩm</Link>
-          <Link href={'/'}>Hỗ trợ tài khoản</Link>
-          <Link href={'/'}>Khiếu nại</Link>
+          <Link href={'/'}>{t('product_questions')}</Link>
+          <Link href={'/'}>{t('account_support')}</Link>
+          <Link href={'/'}>{t('complaints')}</Link>
         </div>
+
         <div className={'flex flex-col justify-center items-center gap-2'}>
           <p className={'font-bold text-[var(--primary)] text-lg'}>
-            Nguyên tắc chung
+            {t('general_guidelines')}
           </p>
-          <Link href={'/'}>Cộng đồng</Link>
-          <Link href={'/'}>Trách nhiệm các bên</Link>
+          <Link href={'/'}>{t('community')}</Link>
+          <Link href={'/'}>{t('parties_responsibilities')}</Link>
         </div>
+
         <div className={'flex flex-col justify-center items-center gap-2'}>
           <p className={'font-bold text-[var(--primary)] text-lg'}>
-            Về chúng tôi
+            {t('about_us')}
           </p>
-          <Link href={'/'}>Về chúng tôi</Link>
-          <Link href={'/'}>Bản quyền</Link>
+          <Link href={'/'}>{t('about_us')}</Link>
+          <Link href={'/'}>{t('copyright')}</Link>
         </div>
       </div>
     </div>
