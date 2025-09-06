@@ -1,3 +1,4 @@
+'use client';
 import {
   Card,
   CardContent,
@@ -12,6 +13,7 @@ import { FaRegCommentAlt } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa6';
 import { IoShareSocialSharp } from 'react-icons/io5';
 import { Separator } from '@/components/ui/separator';
+import { useTranslations } from 'next-intl';
 
 const data = [
   {
@@ -47,6 +49,8 @@ const data = [
 ];
 
 const HomePage = () => {
+  const t = useTranslations('home_page');
+
   return (
     <div className="w-full h-full flex flex-col justify-start items-center gap-10 p-10">
       {data.map((item) => (
@@ -89,17 +93,17 @@ const HomePage = () => {
               <Button variant={'ghost'} className={'hover:cursor-pointer'}>
                 {item.likes}
                 <FaRegHeart />
-                Thích
+                {t('likes')}
               </Button>
               <Button variant={'ghost'} className={'hover:cursor-pointer'}>
                 {item.comments}
                 <FaRegCommentAlt />
-                Bình luận
+                {t('comments')}
               </Button>
               <Button variant={'ghost'} className={'hover:cursor-pointer'}>
                 {item.shares}
                 <IoShareSocialSharp />
-                Chia sẻ
+                {t('share')}
               </Button>
             </div>
           </CardFooter>

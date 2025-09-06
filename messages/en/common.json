@@ -60,6 +60,26 @@
     "setting_privacy": "Settings & Privacy",
     "support_help": "Help & Support",
     "feedback": "Feedback",
-    "sign_out": "Sign Out"
+    "sign_out": "Sign Out",
+    "account": "Account",
+    "friend": "Friends",
+    "memory": "Memories",
+    "saved": "Saved",
+    "group": "Groups",
+    "video": "Videos",
+    "settings": "Settings",
+    "privacy": "Privacy",
+    "term": "Terms",
+    "advertising": "Advertising",
+    "advertising_selection": "Ad Preferences",
+    "cookie": "Cookies",
+    "birthday_title": "Birthday",
+    "birthday_notice": "Today is the birthday of",
+    "contact_title": "Contacts"
+  },
+  "home_page": {
+    "likes": "Likes",
+    "comments": "Comments",
+    "share": "Share"
   }
 }

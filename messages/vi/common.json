@@ -76,5 +76,10 @@
     "birthday_title": "Sinh nhật",
     "birthday_notice": "Hôm nay là sinh nhật của",
     "contact_title": "Người liên hệ"
+  },
+  "home_page": {
+    "likes": "Thích",
+    "comments": "Bình luận",
+    "share": "Chia sẻ"
   }
 }

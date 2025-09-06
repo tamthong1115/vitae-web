@@ -4,21 +4,17 @@
     "language": "言語",
     "label": "日本語",
     "icon": "https://img.icons8.com/color/48/japan.png",
-
     "policy_title": "ポリシー",
     "policy_privacy": "プライバシー",
     "policy_legal": "法的事項",
     "postings": "投稿内容",
     "community": "コミュニティ",
-
     "products_support": "製品とサポート",
     "product_questions": "製品に関する質問",
     "account_support": "アカウントサポート",
     "complaints": "苦情",
-
     "general_guidelines": "一般的なガイドライン",
     "parties_responsibilities": "当事者の責任",
-
     "about_us": "私たちについて",
     "copyright": "著作権"
   },
@@ -76,7 +72,14 @@
     "term": "利用規約",
     "advertising": "広告",
     "advertising_selection": "広告の設定",
-    "cookie": "クッキー"
+    "cookie": "クッキー",
+    "birthday_title": "誕生日",
+    "birthday_notice": "今日は次の人の誕生日です",
+    "contact_title": "連絡先"
+  },
+  "home_page": {
+    "likes": "いいね",
+    "comments": "コメント",
+    "share": "共有"
   }
-
 }
