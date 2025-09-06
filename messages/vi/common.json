@@ -4,21 +4,17 @@
     "language": "Ngôn ngữ",
     "label": "Tiếng Việt",
     "icon": "https://img.icons8.com/color/48/vietnam.png",
-
     "policy_title": "Chính sách",
     "policy_privacy": "Quyền riêng tư",
     "policy_legal": "Pháp lý",
     "postings": "Nội dung đăng tải",
     "community": "Cộng đồng",
-
     "products_support": "Sản phẩm & Hỗ trợ",
     "product_questions": "Thắc mắc sản phẩm",
     "account_support": "Hỗ trợ tài khoản",
     "complaints": "Khiếu nại",
-
     "general_guidelines": "Nguyên tắc chung",
     "parties_responsibilities": "Trách nhiệm các bên",
-
     "about_us": "Về chúng tôi",
     "copyright": "Bản quyền"
   },
@@ -55,5 +51,30 @@
     "number_phone_required": "Yêu cầu số điện thoại",
     "register": "Đăng kí",
     "login": "Đăng nhập"
+  },
+  "home_layout": {
+    "search_required": "Vui lòng nhập từ khóa",
+    "search_placeholder": "Tìm kiếm...",
+    "my_account": "Tài khoản của tôi",
+    "profile": "Hồ sơ",
+    "setting_privacy": "Cài đặt và quyền riêng tư",
+    "support_help": "Trợ giúp và hỗ trợ",
+    "feedback": "Đóng góp ý kiến",
+    "sign_out": "Đăng xuất",
+    "account": "Tài khoản",
+    "friend": "Bạn bè",
+    "memory": "Kỉ niệm",
+    "saved": "Đã lưu",
+    "group": "Nhóm",
+    "video": "Video",
+    "settings": "Cài đặt",
+    "privacy": "Quyền riêng tư",
+    "term": "Điều khoản",
+    "advertising": "Quảng cáo",
+    "advertising_selection": "Lựa chọn quảng cáo",
+    "cookie": "Cookie",
+    "birthday_title": "Sinh nhật",
+    "birthday_notice": "Hôm nay là sinh nhật của",
+    "contact_title": "Người liên hệ"
   }
 }

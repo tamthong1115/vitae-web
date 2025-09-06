@@ -55,5 +55,28 @@
     "number_phone_required": "電話番号は必須です",
     "register": "登録",
     "login": "ログイン"
+  },
+  "home_layout": {
+    "search_required": "キーワードを入力してください",
+    "search_placeholder": "検索...",
+    "my_account": "マイアカウント",
+    "profile": "プロフィール",
+    "setting_privacy": "設定とプライバシー",
+    "support_help": "ヘルプとサポート",
+    "feedback": "フィードバック",
+    "sign_out": "ログアウト",
+    "account": "アカウント",
+    "friend": "友達",
+    "memory": "思い出",
+    "saved": "保存済み",
+    "group": "グループ",
+    "video": "動画",
+    "settings": "設定",
+    "privacy": "プライバシー",
+    "term": "利用規約",
+    "advertising": "広告",
+    "advertising_selection": "広告の設定",
+    "cookie": "クッキー"
   }
+
 }

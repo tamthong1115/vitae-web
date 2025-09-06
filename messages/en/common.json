@@ -51,5 +51,15 @@
     "number_phone_required": "Phone number required",
     "register": "Register",
     "login": "Login"
+  },
+  "home_layout": {
+    "search_required": "Please enter a keyword",
+    "search_placeholder": "Search...",
+    "my_account": "My Account",
+    "profile": "Profile",
+    "setting_privacy": "Settings & Privacy",
+    "support_help": "Help & Support",
+    "feedback": "Feedback",
+    "sign_out": "Sign Out"
   }
 }

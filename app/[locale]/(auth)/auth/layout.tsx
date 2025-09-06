@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import React from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { ModeToogle } from '@/components/custom-ui/mode-toogle';
 import { SelectLanguage } from '@/components/custom-ui/select-language';
+import { buttonVariants } from '@/components/ui/button';
+import { BsHouse } from 'react-icons/bs';
 
 export default function UserLayoutClient({
   children,
@@ -14,39 +15,23 @@ export default function UserLayoutClient({
 }) {
   const t = useTranslations('layout');
 
-    return (
-        <div className="w-full h-screen flex flex-col items-center justify-center">
-            <div
-                className="flex flex-row items-center justify-between gap-2 w-full h-fit py-2 px-4 border-b-2 border-b-[var(--primary)] mb-5">
-                <div className="flex-1 flex flex-row justify-start items-center gap-2">
-                    <img src="/p_logo.png" alt="logo" className="w-20 h-20 shadow-lg rounded-lg"/>
-                    <p className="font-bold text-[var(--primary)]">{t("slogan")}</p>
-                </div>
-                <div className="w-fit flex-1 flex flex-row justify-end items-center gap-2">
-                    {/* Nút đổi theme */}
-                    <ModeToogle/>
-
-                    {/* Select đổi ngôn ngữ */}
-                    <SelectLanguage t={t}/>
-                </div>
-            </div>
-            <div className="w-full h-full mb-5">{children}</div>
-            <div
-                className={
-                    "w-full h-fit border-t-2 border-[var(--primary)] py-2 px-4 grid grid-cols-4 grid-rows-1 items-start gap-2"
-                }
-            >
-                <div className={"flex flex-col justify-center items-center gap-2"}>
-                    <p className={"font-bold text-[var(--primary)] text-lg"}>
-                        {t("policy_title")}
-                    </p>
-                    <Link href={"/"}>{t("policy_privacy")}</Link>
-                    <Link href={"/"}>{t("policy_legal")}</Link>
-                    <Link href={"/"}>{t("postings")}</Link>
-                    <Link href={"/"}>{t("community")}</Link>
-                </div>
-          {/* Select đổi ngôn ngữ */}
-          <SelectLanguage t={t} />
+  return (
+    <div className="w-full h-screen flex flex-col items-center justify-start">
+      <div className="flex flex-row items-center justify-between gap-2 w-full h-fit py-2 px-4 border-b-2 border-b-[var(--primary)] mb-5">
+        <div className="flex-1 flex flex-row justify-start items-center gap-2">
+          <img
+            src="/p_logo.png"
+            alt="logo"
+            className="w-20 h-20 shadow-lg rounded-lg"
+          />
+          <p className="font-bold text-[var(--primary)]">{t('slogan')}</p>
+        </div>
+        <div className="w-fit flex-1 flex flex-row justify-end items-center gap-2">
+          <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
+            <BsHouse color={'var(--primary)'} size={20} />
+          </Link>
+          <ModeToogle />
+          <SelectLanguage />
         </div>
       </div>
       <div className="w-full h-full mb-5">{children}</div>
