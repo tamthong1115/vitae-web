@@ -1,6 +1,6 @@
 'use client';
 
-import { FaApple, FaGooglePlusG } from 'react-icons/fa6';
+import { FaApple } from 'react-icons/fa6';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Formik } from 'formik';
@@ -16,6 +16,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import GoogleLoginButton from '@/app/[locale]/(auth)/auth/_components/GoogleLoginButton';
+import { ToastOnQuery } from '@/app/_components/ToastOnQuery';
+import { Suspense } from 'react';
 
 export default function UserLoginPage() {
   const t = useTranslations('login');
@@ -25,7 +28,18 @@ export default function UserLoginPage() {
       <div className="w-[40%] shadow-lg drop-shadow-2xl rounded-xl">
         <img src="/p_login.png" alt="logo" className="w-full rounded-xl" />
       </div>
-
+      <Suspense>
+        <ToastOnQuery
+          param="error"
+          map={{
+            signin: {
+              type: 'error',
+              title: t('error.title'),
+              description: t('error.desc'),
+            },
+          }}
+        />
+      </Suspense>
       <div className="w-[40%] h-fit flex flex-col justify-start items-center gap-2">
         <Card className={'w-full'}>
           <CardHeader>
@@ -159,15 +173,7 @@ export default function UserLoginPage() {
               </span>
             </div>
             <div className="w-full h-fit m-2 p-2 shadow-lg rounded-lg grid md:grid-cols-1 md:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-2">
-              <Link
-                href={'/'}
-                className={buttonVariants({ variant: 'outline' })}
-              >
-                <div className="w-fit">
-                  <FaGooglePlusG size={30} color={'var(--primary)'} />
-                </div>
-                <p className="w-fit text-left">{t('login_google')}</p>
-              </Link>
+              <GoogleLoginButton />
               <Link
                 href={'/'}
                 className={buttonVariants({ variant: 'outline' })}

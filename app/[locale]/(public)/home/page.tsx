@@ -14,6 +14,10 @@ import { FaRegHeart } from 'react-icons/fa6';
 import { IoShareSocialSharp } from 'react-icons/io5';
 import { Separator } from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
+import { ToastOnQuery } from '@/app/_components/ToastOnQuery';
+import { toast, Toaster } from 'sonner';
+import { run } from 'node:test';
+import { Suspense } from 'react';
 
 const data = [
   {
@@ -50,9 +54,24 @@ const data = [
 
 const HomePage = () => {
   const t = useTranslations('home_page');
+  const tLogin = useTranslations('login');
 
   return (
     <div className="w-full h-full flex flex-col justify-start items-center gap-10 p-10">
+      <button onClick={() => toast.success('Hello world!')}>click me</button>
+      {/*<Toaster />*/}
+      <ToastOnQuery
+        param="login"
+        // onceKey="home_login"
+        deferMs={50}
+        map={{
+          ok: {
+            type: 'success',
+            title: tLogin('success.title'),
+            description: tLogin('success.desc'),
+          },
+        }}
+      />
       {data.map((item) => (
         <Card className={'w-[80%]'} key={item.id}>
           <CardHeader>
