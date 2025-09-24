@@ -30,7 +30,15 @@
     "email_required": "Email cannot be left blank",
     "password_min": "Minimum 6 characters",
     "password_required": "Password cannot be empty",
-    "others_way": "Or"
+    "others_way": "Or",
+    "success": {
+      "title": "Signed in 🎉",
+      "desc": "You're now signed in."
+    },
+    "error": {
+      "title": "Sign-in failed",
+      "desc": "Please try again or use a different method."
+    }
   },
   "register": {
     "welcome": "Welcome to Vitae!",

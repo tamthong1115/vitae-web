@@ -30,7 +30,15 @@
     "email_required": "メールアドレスは必須です",
     "password_min": "6文字以上で入力してください",
     "password_required": "パスワードは必須です",
-    "others_way": "または"
+    "others_way": "または",
+    "success": {
+      "title": "サインインしました 🎉",
+      "desc": "サインインに成功しました。"
+    },
+    "error": {
+      "title": "サインインに失敗しました",
+      "desc": "もう一度お試しください。別の方法もご検討ください。"
+    }
   },
   "register": {
     "welcome": "Vitaeへようこそ！",

@@ -30,7 +30,15 @@
     "email_required": "Email không được bỏ trống",
     "password_min": "Tối thiểu 6 kí tự",
     "password_required": "Mật khẩu không được bỏ trống",
-    "others_way": "Hoặc"
+    "others_way": "Hoặc",
+    "success": {
+      "title": "Đăng nhập thành công 🎉",
+      "desc": "Bạn đã đăng nhập."
+    },
+    "error": {
+      "title": "Đăng nhập thất bại",
+      "desc": "Vui lòng thử lại hoặc dùng phương thức khác."
+    }
   },
   "register": {
     "welcome": "Chào mừng bạn đến với Vitae!",
